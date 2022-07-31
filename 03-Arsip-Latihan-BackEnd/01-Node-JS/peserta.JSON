@@ -1,0 +1,20 @@
+{
+    "Peserta": [
+        {
+            "username": "Arrie",
+            "Asal": "Bandung"
+        },
+        {
+            "username": "Budi",
+            "Asal": "Bandung"
+        },
+        {
+            "username": "Udin",
+            "Asal": "Bandung"
+        },
+        {
+            "username": "Julio",
+            "Asal": "Bandung"
+        }
+    ]
+}
