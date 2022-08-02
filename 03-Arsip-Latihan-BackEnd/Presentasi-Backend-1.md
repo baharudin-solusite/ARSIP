@@ -28,6 +28,10 @@ Walaupun Node.js tidak mendukung multi-threading kita dapat melihat JavaScript s
 
 Pengolahan data yang dilakukan dalam sebuah server, sebagai contoh saat kita menggunakan JavaScript, biasanya menggunakan web server berupa Google Chrome, tetapi dalam pengoperasiaan pada node Js kita akan menjalankan di sebuah terminal dengan menggunakan perintah/format **Node** 
 
+<img src="./00-img/console.jpeg"  width="400" height="200">
+
+
+
 ### **5. Penggunaan JavaScript Pada Node Js**
 - Arrow Expression
 
@@ -88,20 +92,32 @@ console.log("masak");
     ]
 }
 ```
-### **6. Module Node JS**
+### **6. Instalasi Node JS**
+1. **link** : https://nodejs.org/en/
+2. **Cek** : npm -v
+3. **Running Terminal** node
 
-1. Module
-2. Process
-3. OS
-4. Util
-5. Events
-6. Errors
-7. FS
-8. Timers
+### **7. Module Node JS**
+
+- console : merupakan module bawaan dari javascript yang ada di node JS untuk digunakan sebagai debug atau menampilkan code secara interface
+
+```js
+console.log("Skilvul");
+//Skilvul
+```
+
+- Process : adalah modules yang digunakan untuk menampilkan dan mengontrol prosess Node JS yang sedang dijalankan.
+
+- OS : module merupakan module yang digunakan untuk menyediakan informasi terkait sistem operasi komputer yang digunakan user.
+- Util : Module Util merupakan alat bantu / utilities untuk mendukung kebutuhan internal API di Node JS
+- Events : adalah kejadian yang terjadi di halaman web. Kejadian yang dimaksud di sini seperti aktivitas yang dikerjakan pada halaman web.
+- Errors : Errors merupakan modules yang dapat digunakan untuk mendefinisikan error di Node JS sehingga lebih informatif. Kita juga dapat menghandle error menggunakan try catch
+- FS : “file system” merupakan module yang dapat membantu berinteraksi dengan file yang ada diluar code. FS paling sering digunakan untuk membaca file
+- Timers : merupakan modules yang digunakan untuk melakukan scheduling atau mengatur waktu pemanggilan fungsi yang dapat diatur di waktu tertentu
 
 ## **B.Web Server & RESTful API**
 
-### Apa itu web server
+### **Apa itu web server**
 - Web server yaitu sebuah perangkat lunak yang berfungsi untuk memberikan layanan berupa data, dan berfungsi menerima permintaan HTTP atau HTTPS dari klien yang menggunakan browser (chrome, firefox, dll)
 
 ### ***3 komponen penting Web Server***
@@ -128,8 +144,47 @@ server web mencakup beberapa bagian yang mengontrol cara pengguna web mengakses 
 - **Dynamic Site** dapat mengembalikan data yang berbeda untuk URL berdasarkan informasi yang diberikan oleh pengguna atau preferensi yang disimpan dan dapat melakukan operasi lain sebagai bagian dari pengembalian respons (misalnya, mengirim pemberitahuan).
 
 
+<img src="https://slideplayer.info/slide/13944363/85/images/28/Perbedaan+Web+Statis+dan+Web+Dinamis.jpg"  width="600" height="400">
+
+
+### **Apa yang dimaksud dengan REST?**
+- singkatan dari REpresentational State Transfer. REST merupakan gaya arsitektur untuk menyediakan standar antara sistem komputer di web, sehingga memudahkan sistem untuk berkomunikasi satu sama lain.
+
+### REST
+
+- REST (Representional State Transfer) adalah suatu arsitektur metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dan metode ini sering diterapkan dalam pengembangan aplikasi. Dimana tujuannya adalah untuk menjadikan sistem yang memiliki performa yang baik, cepat dan mudah untuk di kembangkan (scale) terutama dalam pertukaran
+
+### RESTful API / REST API
+- Implementasi dari API (Application Programming Interface). REST (Representional State Transfer) adalah suatu arsitektur metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dan metode ini sering diterapkan dalam pengembangan aplikasi. Dimana tujuannya adalah untuk menjadikan sistem yang memiliki performa yang baik, cepat dan mudah untuk di kembangkan (scale) terutama dalam pertukaran dan komunikasi data.
+
+### Komponen REST API
+
+**1. URL Design**
+RESTful API diakses menggunakan protokol HTTP. Penamaan dan struktur URL yang konsisten akan menghasilkan API yang baik dan mudah untuk dimengerti developer. URL API biasa disebut endpoint dalam pemanggilannya.
+
+**2. HTTP Verbs**
+
+- GET : metode HTTP Request yang paling simpel, metode ini digunakan untuk membaca atau mendapatkan data dari sumber.
+- POST metode HTTP Request yang digunakan untuk membuat data baru dengan menyisipkan data dalam body saat request dilakukan.
+- PUT adalah metode HTTP Request yang biasanya digunakan untuk melakukan update data resource.
+- DELETE adalah metode HTTP Request yang digunakan untuk menghapus suatu data pada resource.
+
+**3. HTTP Response Code**
+Secara umum terdapat 3 kelompok yang biasa kita jumpai pada RESTful API yaitu :
+
+- 2XX : response code yang menampilkan bahwa request berhasil.
+- 4XX : response code yang menampilkan bahwa request mengalami kesalahan pada sisi client.
+- 5XX : response code yang menampilkan bahwa request mengalami kesalahan pada sisi server.
+
+**4. Format Response**
+Setiap request yang dilakukan client akan menerima data response dari server, response tersebut biasanya berupa data XML ataupun JSON.
+
+
 ## **C.Express**
 - Express JS adalah salah satu framework yang berasal dari bahasa pemrograman JavaScript yang dirancang secara fleksibel dan minimalis, untuk pengembangan aplikasi back-end.
+
+
+
 
 <br>
 <img src="https://www.goldenfast.net/blog/wp-content/uploads/2020/11/cara-kerja-web-server.jpg"  width="600" height="400">
@@ -144,7 +199,9 @@ server web mencakup beberapa bagian yang mengontrol cara pengguna web mengakses 
       "start": "node app.js",
       "dev": "nodemon app.js",
   ```
+   - jalankan code npm run App.js
 
+Folder App.js
 ```JS
 const express = require("express")
 const app = express()
@@ -210,4 +267,5 @@ app.listen(PORT, () => {
     console.log("server running on port" + PORT);
 });
 ```
+
 ## **D.MySQL**
