@@ -199,7 +199,7 @@ Setiap request yang dilakukan client akan menerima data response dari server, re
       "start": "node app.js",
       "dev": "nodemon app.js",
   ```
-   - jalankan code npm run App.js
+   - jalankan code **npm run dev**
 
 Folder App.js
 ```JS
@@ -269,3 +269,15 @@ app.listen(PORT, () => {
 ```
 
 ## **D.MySQL**
+- Database adalah kumpulan informasi yang disimpan didalam komputer secara sistematik dan saling berelasi. Database sekumpulan tabel yang berisikan informasi untuk diolah yang kemudian data tersebut bisa digunakan di dalam sebuah sistem. Database Management System (DBMS), software yang dapat digunakan oleh user untuk berkomunikasi dengan data yang ada dalam media penyimpanan.
+  
+### **Install mySQL**
+[https://dev.mysql.com/downloads/installer/](https://dev.mysql.com/downloads/installer/)
+
+### **membuat data di mySQL**
+## Update data
+- <img src="./00-img/1.jpeg" width="800" height="400">
+## Delete data 
+- <img src="./00-img/2.jpeg" width="800" height="400">
+
+
