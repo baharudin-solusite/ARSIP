@@ -275,6 +275,8 @@ app.listen(PORT, () => {
 [https://dev.mysql.com/downloads/installer/](https://dev.mysql.com/downloads/installer/)
 
 ### **membuat data di mySQL**
+## Buat Data
+- <img src="./00-img/4.jpeg" width="800" height="400">
 ## Update data
 - <img src="./00-img/1.jpeg" width="800" height="400">
 ## Delete data 
