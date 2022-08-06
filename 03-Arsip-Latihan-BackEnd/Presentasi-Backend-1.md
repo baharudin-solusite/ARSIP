@@ -187,7 +187,7 @@ Setiap request yang dilakukan client akan menerima data response dari server, re
 
 
 <br>
-<img src="https://www.goldenfast.net/blog/wp-content/uploads/2020/11/cara-kerja-web-server.jpg"  width="600" height="400">
+<img src="https://dwblog-ecdf.kxcdn.com/wp-content/uploads/2022/03/Cara-Kerja-Enkripsi-1024x467.jpg"  width="600" height="400">
 
 ### **Penggunaan Express API**
 1. Buka Terminal 
