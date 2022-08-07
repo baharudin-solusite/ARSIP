@@ -1,0 +1,21 @@
+{
+  "name": "07-auth",
+  "version": "1.0.0",
+  "description": "- **Authentication** : yaitu memvalidasi atau memverifikasi user yang ingin masuk(login) kesebuah web atau aplikasi untuk mencocokan sebuah data apakah user tersebut pemilik idetitas. yang berupa username dan password.\r - **Authorization** : yaitu hak apa saja yang dimiki user tersebut pada sebuah web atau aplikasi yang mereka jalankan. sebagai contoh: terdapat 2 user dimana user tersebut sudah login dan belum login maka akses yang diberikan sebuah apikasi atau web kepada user yang sudah login akan lebih banyak dari pada yang belum login",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

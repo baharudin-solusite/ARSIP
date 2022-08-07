@@ -1,8 +1,8 @@
-# Authentication & Authorization in Express
+# 1. Authentication & Authorization in Express
 - **Authentication** : yaitu memvalidasi atau memverifikasi user yang ingin masuk(login) kesebuah web atau aplikasi untuk mencocokan sebuah data apakah user tersebut pemilik idetitas. yang berupa username dan password.
 - **Authorization** : yaitu hak apa saja yang dimiki user tersebut pada sebuah web atau aplikasi yang mereka jalankan. sebagai contoh: terdapat 2 user dimana user tersebut sudah login dan belum login maka akses yang diberikan sebuah apikasi atau web kepada user yang sudah login akan lebih banyak dari pada yang belum login 
 
-## Authentication
+## A. Authentication
 
 - **Faktor Authentication**
     1. Knowledge : informasi yang bisa kita ketahui  
@@ -10,12 +10,12 @@
     3. Inherence : yaitu biometric data seperti fingerprints,Face Unlock,dll
 - **Autentikasi multifaktor (MFA)** memberikan lapisan perlindungan tambahan pada proses masuk. Ketika mengakses akun atau aplikasi, pengguna perlu memberikan verifikasi identitas tambahan, seperti memindai sidik jari atau memasukkan kode yang diterima melalui telepon.
   
-## Authorization
+## B. Authorization
 
 - **Faktor Authorization**
     - Hak akses yang dimiliki oleh user seperti halnya saat kita menyewa sebuah kamar di hotel, perlengkapan atau properti yang dimiliki user pasti berbeda-beda seperti : akses wifi, jumlah properti, dll
   
-## Encryption
+## C. Encryption
 - bagaimana kita mengamankan data agar tidak terlihat dan diakses oleh oranglain
 - bagaimana Encryption bekerja 
   
@@ -26,11 +26,149 @@
 <img src="https://www.loginradius.com/blog/static/a6522d000e0137d5fdf82fd370646d12/2bef9/comparison-table.png" width="600" height="400">
 
 
-## JWT ( JSON Web Token)
+## D. JWT ( JSON Web Token)
 - yang berarti token ini menggunakan JSON (Javascript Object Notation) berbentuk string panjang yang sangat random, lalu token ini memungkinkan kita untuk mengirimkan data yang dapat diverifikasi oleh dua pihak atau lebih.
 
-## Penggunaan JWT 
-- buka Web JWT berikut [https://jwt.io/](https://jwt.io/)
+## E. Penggunaan JWT 
+1. buka Web JWT berikut [https://jwt.io/](https://jwt.io/)
 
-  <img src="../03-Arsip-Latihan-BackEnd/00-img/WhatsApp%20Image%202022-08-06%20at%2016.15.43.jpeg" width="600" height="400">
+  <img src="./../00-img/Auth.jpeg" width="600" height="400">
+
+2. bukak **visual studio code**
+3. buat Folder project Baru 
+4. Kemudian ketik format berikut
+      - **npm init -y**
+      - **npm install express body-parser jsonwebtoken** 
+      - **npm install --save-dev nodemon**
+5. setelah selesai kemudian bukak package.json lalu tambahkan scripts **"dev": "nodemon index.js"** 
+6. untuk menjalankan code menggunakan format: **npm run dev**
+
+7. index.js
+```js
+const express = require("express");
+const bodyParser = require("body-parser");
+const jwt = require("jsonwebtoken");
+
+const app = express();
+const PORT = process.env.PORT || 8000;
+
+app.use(bodyParser.json());
+app.use(express.json());
+
+const users = [
+    {
+        username: "udin",
+        password: "password123",
+    },
+    {
+        username: "udin2",
+        password: "password123",
+    },
+    {
+        username: "udin3",
+        password: "password123",
+    },
+    {
+        username: "udin4",
+        password: "password123",
+        role: "admin"
+    },
+];
+const books = [
+    {
+        books: "DoraEmon",
+    },
+    {
+        books: "Naruto",
+    },
+    {
+        books: "Violet Evergarden",
+    },
+];
+
+const accessTokenSecret = "verysecretpassword456";
+
+app.get("/", (req, res) => {
+    res.send("success");
+});
+
+app.post("/login", (req, res) => {
+
+    const { username, password } = req.body;
+    console.log("body", username, password);
+
+
+    const user = users.find((item) => {
+        return item.username === username && item.password === password;
+    });
+
+    if (user) {
+        const accessToken = jwt.sign(
+            {
+                username: user.username,
+                role: user.role,
+            },
+            accessTokenSecret
+        );
+
+        res.json({
+            accessToken,
+        });
+    } else {
+        res.send("username atau password anda salah");
+    }
+});
+
+
+const verifyJWT = (req, res, next) => {
+    const authHeader = req.headers.authorization;
+    console.log("auth", authHeader);
+
+    if (authHeader) {
+        jwt.verify(authHeader, accessTokenSecret, (error, user) => {
+            if (error) {
+                return res.sendStatus(401);
+            }
+            req.user = user;
+            next();
+        });
+    } else {
+        res.sendStatus(401);
+    }
+};
+
+app.get("/books", verifyJWT, (req, res) => {
+    const { role } = req.user;
+    console.log("role", role);
+    if (role === "admin") {
+
+        res.json(books);
+    } else {
+        res.send("anda bukan admin");
+        res.sendStatus(401);
+    }
+});
+
+app.listen(PORT, () => {
+    console.log("running on port " + PORT);
+});
+   
+```
+8. salin salah satu username dan password, kemudian buka Tunder Client di VisCode
+
+<img src="./../00-img/Auth1.jpeg" width="600" height="400">
+
+9. yang terakhir letakan Token yang telah diesekusi Tunder Client di web JWT
+
+<img src="./../00-img/Auth2.jpeg" width="600" height="400">
+
+
+## F. Dokumetasi WEB
+1. ["https://expressjs.com/"](Express.js)
+2. ["https://nodejs.org/en/"](node.js)
+3. ["https://jwt.io/"](https://jwt.io/)
+
+## G. Tool tambahan 
+- install **THUNDER CLIENT** visual studio code
+
 
