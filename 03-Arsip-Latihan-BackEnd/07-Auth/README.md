@@ -22,15 +22,8 @@
   
 <img src="https://dwblog-ecdf.kxcdn.com/wp-content/uploads/2022/03/Cara-Kerja-Enkripsi-1024x467.jpg" width="600" height="400">
 
-## cookies, local storage, dan session storage
 
-<img src="https://www.loginradius.com/blog/static/a6522d000e0137d5fdf82fd370646d12/2bef9/comparison-table.png" width="600" height="400">
-
-
-## D. JWT ( JSON Web Token)
-- yang berarti token ini menggunakan JSON (Javascript Object Notation) berbentuk string panjang yang sangat random, lalu token ini memungkinkan kita untuk mengirimkan data yang dapat diverifikasi oleh dua pihak atau lebih.
-
-## E. Penggunaan JWT 
+## D. Penggunaan JWT 
 1. buka Web JWT berikut [https://jwt.io/](https://jwt.io/)
 
   <img src="./../00-img/Auth.jpeg" width="600" height="400">
