@@ -1,19 +1,20 @@
 # 1. Authentication & Authorization in Express
-- **Authentication** : yaitu memvalidasi atau memverifikasi user yang ingin masuk(login) kesebuah web atau aplikasi untuk mencocokan sebuah data apakah user tersebut pemilik idetitas. yang berupa username dan password.
-- **Authorization** : yaitu hak apa saja yang dimiki user tersebut pada sebuah web atau aplikasi yang mereka jalankan. sebagai contoh: terdapat 2 user dimana user tersebut sudah login dan belum login maka akses yang diberikan sebuah apikasi atau web kepada user yang sudah login akan lebih banyak dari pada yang belum login 
+- **Authentication** : Memvalidasi atau memverifikasi user 
+- **Authorization** : Akses yang dimiliki user 
 
 ## A. Authentication
 
 - **Faktor Authentication**
-    1. Knowledge : informasi yang bisa kita ketahui  
-    2. Possesion : Sebuah kepemilika atau sebuah posisi yang dimiki user
+    1. Knowledge : informasi yang bisa ketahui  
+    2. Possesion : kepemilikan user
     3. Inherence : yaitu biometric data seperti fingerprints,Face Unlock,dll
-- **Autentikasi multifaktor (MFA)** memberikan lapisan perlindungan tambahan pada proses masuk. Ketika mengakses akun atau aplikasi, pengguna perlu memberikan verifikasi identitas tambahan, seperti memindai sidik jari atau memasukkan kode yang diterima melalui telepon.
+   
+- **Autentikasi multifaktor (MFA)** memberikan lapisan perlindungan tambahan pada proses masuk.
   
 ## B. Authorization
 
 - **Faktor Authorization**
-    - Hak akses yang dimiliki oleh user seperti halnya saat kita menyewa sebuah kamar di hotel, perlengkapan atau properti yang dimiliki user pasti berbeda-beda seperti : akses wifi, jumlah properti, dll
+    - Hak akses yang dimiliki oleh user 
   
 ## C. Encryption
 - bagaimana kita mengamankan data agar tidak terlihat dan diakses oleh oranglain
