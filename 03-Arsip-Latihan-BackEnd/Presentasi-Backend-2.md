@@ -26,7 +26,7 @@
 ## D. Penggunaan JWT 
 1. buka Web JWT berikut [https://jwt.io/](https://jwt.io/)
 
-  <img src="./../03-Arsip-Latihan-BackEnd/00-img/Auth.jpeg.jpeg" width="600" height="400">
+  <img src="./../03-Arsip-Latihan-BackEnd/00-img/Auth.jpeg" width="600" height="400">
 
 2. bukak **visual studio code**
 3. buat Folder project Baru 
@@ -164,5 +164,22 @@ app.listen(PORT, () => {
 
 ## G. Tool tambahan 
 - install **THUNDER CLIENT** visual studio code
+
+# 2. Sequelize
+- Sequelize adalah Node.js promise-based ORM untuk MySQL, PostgreSQL, SQLite, MSSQL dan database SQL lainnya. Sequelize berfungsi untuk bekerja dengan database dan relasi-relasi di dalamnya.
+- Sequelize bertujuan agar kita bisa mengolah dan mengatur data di database kita dengan cepat dan efisien
+
+## A. ORM (Object Relation Mapping)
+- suatu metode pemrogramanyang digunakan untuk mengkonversi data dari lingkungan bhs pemrograman berorientasi objek (OOP) dengan lingkungan database relational
+
+## B. Langkah - langakah penggunakan Sequelize pada node.js
+1. buat Folder baru
+2. inisialisasi dan instal beberapa dependencies berikut;
+   - npm init -y 
+   - npm i express mysql2 sequelize dotenv cors
+   - npm i --save-dev nodemon
+3. 
+
+
 
 
