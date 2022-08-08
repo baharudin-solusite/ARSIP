@@ -150,11 +150,11 @@ app.listen(PORT, () => {
 ```
 8. salin salah satu username dan password, kemudian buka Tunder Client di VisCode
 
-<img src="./../00-img/Auth1.jpeg" width="600" height="400">
+<img src="./../03-Arsip-Latihan-BackEnd/00-img/Auth1.jpeg" width="600" height="400">
 
 9. yang terakhir letakan Token yang telah diesekusi Tunder Client di web JWT
 
-<img src="./../00-img/Auth2.jpeg" width="600" height="400">
+<img src="./../03-Arsip-Latihan-BackEnd/00-img/Auth2.jpeg" width="600" height="400">
 
 
 ## F. Dokumetasi WEB
