@@ -26,7 +26,7 @@
 ## D. Penggunaan JWT 
 1. buka Web JWT berikut [https://jwt.io/](https://jwt.io/)
 
-  <img src="./../00-img/Auth.jpeg" width="600" height="400">
+  <img src="./../03-Arsip-Latihan-BackEnd/00-img/Auth.jpeg.jpeg" width="600" height="400">
 
 2. bukak **visual studio code**
 3. buat Folder project Baru 
